@@ -1,0 +1,47 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.co
+*.oc
+*.obj
+
+# Object Dependencies
+*.d
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran Module Files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.elf
+*.out
+*.app
+*.asm
+*.bin
+*.hex
+
+# Compiled Man Pages
+*.[0-9].gz
+
+# Code Traversal
+tags
+cscope
+.ycm_extra_conf.py
+compile_commands.json
