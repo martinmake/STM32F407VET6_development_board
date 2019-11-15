@@ -1,0 +1,102 @@
+project(sandbox CXX C ASM)
+
+add_stm_executable(
+	${PROJECT_NAME}
+	${PROJECT_SOURCE_DIR}/generated/STM32F407VETx_FLASH.ld
+
+	./application.cpp
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+	./generated/Drivers/CMSIS/Include/cmsis_armcc.h
+	./generated/Drivers/CMSIS/Include/cmsis_armclang.h
+	./generated/Drivers/CMSIS/Include/cmsis_compiler.h
+	./generated/Drivers/CMSIS/Include/cmsis_gcc.h
+	./generated/Drivers/CMSIS/Include/cmsis_iccarm.h
+	./generated/Drivers/CMSIS/Include/cmsis_version.h
+	./generated/Drivers/CMSIS/Include/core_armv8mbl.h
+	./generated/Drivers/CMSIS/Include/core_armv8mml.h
+	./generated/Drivers/CMSIS/Include/core_cm0.h
+	./generated/Drivers/CMSIS/Include/core_cm0plus.h
+	./generated/Drivers/CMSIS/Include/core_cm1.h
+	./generated/Drivers/CMSIS/Include/core_cm23.h
+	./generated/Drivers/CMSIS/Include/core_cm33.h
+	./generated/Drivers/CMSIS/Include/core_cm3.h
+	./generated/Drivers/CMSIS/Include/core_cm4.h
+	./generated/Drivers/CMSIS/Include/core_cm7.h
+	./generated/Drivers/CMSIS/Include/core_sc000.h
+	./generated/Drivers/CMSIS/Include/core_sc300.h
+	./generated/Drivers/CMSIS/Include/mpu_armv7.h
+	./generated/Drivers/CMSIS/Include/mpu_armv8.h
+	./generated/Drivers/CMSIS/Include/tz_context.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+	./generated/Inc/gpio.h
+	./generated/Inc/main.h
+	./generated/Inc/stm32f4xx_hal_conf.h
+	./generated/Inc/stm32f4xx_it.h
+	./generated/Inc/sys.h
+	./generated/Src/gpio.c
+	./generated/Src/main.c
+	./generated/Src/stm32f4xx_hal_msp.c
+	./generated/Src/stm32f4xx_it.c
+	./generated/Src/sys.c
+	./generated/Src/system_stm32f4xx.c
+	./generated/startup_stm32f407xx.s
+)
+
+target_include_directories(
+	${PROJECT_NAME}.elf PRIVATE
+
+	./generated/
+	./generated/Drivers
+	./generated/Drivers/CMSIS
+	./generated/Drivers/CMSIS/Device
+	./generated/Drivers/CMSIS/Device/ST
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx/Source
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates
+	./generated/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+	./generated/Drivers/CMSIS/Include
+	./generated/Drivers/STM32F4xx_HAL_Driver
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc
+	./generated/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+	./generated/Drivers/STM32F4xx_HAL_Driver/Src
+	./generated/Inc
+	./generated/Src
+)
+
+target_link_libraries(
+	${PROJECT_NAME}.elf
+)
