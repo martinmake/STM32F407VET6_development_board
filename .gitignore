@@ -1,0 +1,59 @@
+# CMake build
+build
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.co
+*.oc
+*.obj
+
+# Object dependencies
+*.d
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.elf
+*.out
+*.app
+*.asm
+*.bin
+*.hex
+
+# Man pages
+*.[0-9].gz
+
+# Code traversal
+tags
+cscope
+.ycm_extra_conf.py
+compile_commands.json
+
+# Eagle
+*.*#*
+eagle.epf
+*.scr
+*.~cv
+*.tmp
+*.epf
+*.cam
