@@ -1,4 +1,7 @@
 set(MCU "-mcpu=${CPU} -mfpu=${FPU} -mfloat-abi=${FLOAT_ABI} -D${DEVICE} -mthumb")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${MCU}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${MCU}")
+set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} ${MCU}")
 add_definitions("-DUSE_HAL_DRIVER")
 
 if(NOT UPLOADTOOL)
@@ -110,8 +113,7 @@ function(add_stm_executable)
 		${elf_file}
 
 		PROPERTIES
-			COMPILE_FLAGS "${MCU}"
-			LINK_FLAGS "${MCU} -T${executable_LINKER_SCRIPT} -Wl,--gc-sections -Wl,-Map,${map_file}"
+			LINK_FLAGS "-T${executable_LINKER_SCRIPT} -Wl,--gc-sections -Wl,-Map,${map_file}"
 	)
 
 	add_custom_command(
