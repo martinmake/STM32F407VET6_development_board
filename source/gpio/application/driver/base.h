@@ -1,13 +1,13 @@
-#ifndef _DRIVER_BASE_H_
-#define _DRIVER_BASE_H_
+#ifndef _APPLICATION_DRIVER_BASE_H_
+#define _APPLICATION_DRIVER_BASE_H_
 
 #include <stm32f4xx_hal.h>
 
-#include <util.h>
-using namespace BITS;
+#include <fosl/util.h>
+using namespace bits;
 
-#define INITIALIZATION_OK(    ...) { return BITS::OK;     }
-#define INITIALIZATION_FAILED(...) { return BITS::FAILED; }
+#define INITIALIZATION_OK(    ...) { return OK;     }
+#define INITIALIZATION_FAILED(...) { return FAILED; }
 
 namespace Driver
 {

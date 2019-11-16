@@ -1,6 +1,6 @@
 #include "usart.h"
 
-#include "driver/tty.h"
+#include "driver/tty/handle.h"
 
 extern "C" int _write(int file, char *data, int len)
 {
@@ -20,7 +20,7 @@ namespace Driver
 	namespace Tty
 	{
 		Handle::Handle(void)
-			: Fosl::Tty::Base(stdout)
+			: fosl::Tty::Base(stdout)
 		{
 		}
 

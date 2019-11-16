@@ -1,4 +1,4 @@
-#include "driver/status_leds.h"
+#include "driver/status_leds/handle.h"
 
 namespace Driver
 {
@@ -11,6 +11,7 @@ namespace Driver
 			status_leds(SIGNAL::OK);
 			INITIALIZATION_OK("STATUS LEDS");
 		}
+
 		Handle& Handle::operator()(SIGNAL signal)
 		{
 			switch (signal)

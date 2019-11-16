@@ -190,7 +190,7 @@ add_custom_target(
 
 # tio
 add_custom_target(
-	connect_serial
+	connection_over_serial_port
 
 	sudo ${SERIALTOOL} -b ${SERIALTOOL_BAUDRATE} -d 8 -s 1 -p none -e -mINLCRNL ${SERIALTOOL_SERIAL_PORT}
 
@@ -199,7 +199,7 @@ add_custom_target(
 
 # tio
 add_custom_target(
-	connect_vcp
+	connection_over_virtual_com_port
 
 	sudo ${SERIALTOOL} -e -mINLCRNL ${SERIALTOOL_VCP_PORT}
 

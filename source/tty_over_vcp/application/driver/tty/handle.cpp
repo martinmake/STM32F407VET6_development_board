@@ -2,7 +2,7 @@
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
 
-#include "driver/tty.h"
+#include "driver/tty/handle.h"
 
 extern USBD_HandleTypeDef hUsbDeviceFS;
 
@@ -24,7 +24,7 @@ namespace Driver
 	namespace Tty
 	{
 		Handle::Handle(void)
-			: Fosl::Tty::Base(stdout)
+			: fosl::Tty::Base(stdout)
 		{
 		}
 
@@ -41,6 +41,9 @@ namespace Driver
 			printf("                                                       \r");
 			printf("                                                       \r");
 			printf("                                                       \r");
+			printf("                                                       \r");
+			printf("                                                       \r");
+			HAL_Delay(10);
 			reset_device();
 
 			INITIALIZATION_OK("TTY");

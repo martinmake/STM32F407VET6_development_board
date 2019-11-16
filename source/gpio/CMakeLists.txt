@@ -10,8 +10,9 @@ add_stm_executable(
 	./application/driver/base.h
 	./application/drivers.cpp
 	./application/drivers.h
-	./application/driver/status_leds.cpp
-	./application/driver/status_leds.h
+	./application/driver/status_leds/defs.h
+	./application/driver/status_leds/handle.cpp
+	./application/driver/status_leds/handle.h
 	./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 	./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 	./Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -116,6 +117,6 @@ target_include_directories(
 target_link_libraries(
 	${PROJECT_NAME}.elf
 
-	math
-	util
+	fosl-math
+	fosl-arm-util
 )

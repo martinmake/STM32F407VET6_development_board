@@ -4,7 +4,7 @@
 	tty(DISPLAY_ATTRIBUTE::FG_SET_COLOR, DISPLAY_ATTRIBUTE::RGB, r, g, b);
 #define DELAY() HAL_Delay(500)
 
-using namespace Fosl;
+using namespace fosl;
 using namespace Driver;
 
 extern "C" void application(void)
@@ -13,7 +13,7 @@ extern "C" void application(void)
 
 	while (true)
 	{
-		using namespace Fosl::Tty;
+		using namespace fosl::Tty;
 
 		tty(
 			DISPLAY_ATTRIBUTE::RESET,

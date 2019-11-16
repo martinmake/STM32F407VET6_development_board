@@ -1,7 +1,7 @@
-#ifndef _EVALUATION_DRIVER_TTY_H_
-#define _EVALUATION_DRIVER_TTY_H_
+#ifndef _EVALUATION_DRIVER_TTY_HANDLE_H_
+#define _EVALUATION_DRIVER_TTY_HANDLE_H_
 
-#include <tty.h>
+#include <fosl/tty/base.h>
 
 #include "driver/base.h"
 
@@ -9,7 +9,7 @@ namespace Driver
 {
 	namespace Tty
 	{
-		class Handle : public Base, public Fosl::Tty::Base
+		class Handle : public Base, public fosl::Tty::Base
 		{
 			public:
 				Handle(void);
