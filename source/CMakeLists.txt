@@ -1,6 +1,6 @@
 # add_subdirectory(sandbox)
 add_subdirectory(gpio)
 add_subdirectory(tty_over_uart)
-# add_subdirectory(tty_over_vcp)
+add_subdirectory(tty_over_vcp)
 # add_subdirectory(lcd_with_fsmc)
 # add_subdirectory(lcd_with_fsmc_and_dma)

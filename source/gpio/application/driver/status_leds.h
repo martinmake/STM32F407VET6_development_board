@@ -20,18 +20,23 @@ namespace Driver
 			ERROR,
 		};
 
+		inline const auto ERROR_GPIO_PORT = GPIOA;
+		inline const auto ERROR_GPIO_PIN  = GPIO_PIN_6;
+		inline const auto WARNING_GPIO_PORT = GPIOA;
+		inline const auto WARNING_GPIO_PIN  = GPIO_PIN_7;
+
 		class Handle : public Driver::Base
 		{
-			public: // CONSTRUCTORS
+			public:
 				Handle(void) = default;
-			public: // DESTRUCTOR
+			public:
 				~Handle(void) = default;
 
-			public: // METHODS
+			public:
 				bool initialize(void) override;
 
-			public: // OPERATORS
-				void operator()(SIGNAL signal);
+			public:
+				Handle& operator()(SIGNAL signal);
 		};
 	}
 

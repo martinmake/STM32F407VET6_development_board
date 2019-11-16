@@ -1,11 +1,6 @@
 #ifndef _EVALUATION_DRIVER_BASE_H_
 #define _EVALUATION_DRIVER_BASE_H_
 
-#include <stm32f4xx_hal.h>
-
-#include <util.h>
-using namespace BITS;
-
 #include "config.h"
 
 #ifdef INITIALIZATION_VERBOSE

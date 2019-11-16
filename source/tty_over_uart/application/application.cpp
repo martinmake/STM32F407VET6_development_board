@@ -13,7 +13,7 @@ extern "C" void application(void)
 
 	while (true)
 	{
-		using namespace Tty;
+		using namespace Fosl::Tty;
 
 		tty(
 			DISPLAY_ATTRIBUTE::RESET,

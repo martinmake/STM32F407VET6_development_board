@@ -2,37 +2,38 @@
 
 namespace Driver
 {
-	using namespace STATUS_LEDS;
+	StatusLeds::Handle status_leds;
 
-	StatusLeds status_leds;
-
-	// METHODS
-	bool StatusLeds::initialize(void)
+	namespace StatusLeds
 	{
-		signal(SIGNAL::OK);
-		INITIALIZATION_OK("STATUS LEDS");
-	}
-	//
-	void StatusLeds::signal(SIGNAL signal)
-	{
-		switch (signal)
+		bool Handle::initialize(void)
 		{
-			case SIGNAL::OK:
-				HAL_GPIO_WritePin(STATUS_LED_ERROR_GPIO,   STATUS_LED_ERROR_GPIO_PIN,   GPIO_PIN_SET);
-				HAL_GPIO_WritePin(STATUS_LED_WARNING_GPIO, STATUS_LED_WARNING_GPIO_PIN, GPIO_PIN_SET);
-				break;
-			case SIGNAL::SUCCESS:
-				HAL_GPIO_WritePin(STATUS_LED_ERROR_GPIO,   STATUS_LED_ERROR_GPIO_PIN,   GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(STATUS_LED_WARNING_GPIO, STATUS_LED_WARNING_GPIO_PIN, GPIO_PIN_RESET);
-				break;
-			case SIGNAL::WARNING:
-				HAL_GPIO_WritePin(STATUS_LED_ERROR_GPIO,   STATUS_LED_ERROR_GPIO_PIN,   GPIO_PIN_SET);
-				HAL_GPIO_WritePin(STATUS_LED_WARNING_GPIO, STATUS_LED_WARNING_GPIO_PIN, GPIO_PIN_RESET);
-				break;
-			case SIGNAL::ERROR:
-				HAL_GPIO_WritePin(STATUS_LED_ERROR_GPIO,   STATUS_LED_ERROR_GPIO_PIN,   GPIO_PIN_RESET);
-				HAL_GPIO_WritePin(STATUS_LED_WARNING_GPIO, STATUS_LED_WARNING_GPIO_PIN, GPIO_PIN_SET);
-				break;
+			status_leds(SIGNAL::OK);
+			INITIALIZATION_OK("STATUS LEDS");
+		}
+		Handle& Handle::operator()(SIGNAL signal)
+		{
+			switch (signal)
+			{
+				case SIGNAL::OK:
+					HAL_GPIO_WritePin(  ERROR_GPIO_PORT,   ERROR_GPIO_PIN, GPIO_PIN_SET);
+					HAL_GPIO_WritePin(WARNING_GPIO_PORT, WARNING_GPIO_PIN, GPIO_PIN_SET);
+					break;
+				case SIGNAL::SUCCESS:
+					HAL_GPIO_WritePin(  ERROR_GPIO_PORT,   ERROR_GPIO_PIN, GPIO_PIN_RESET);
+					HAL_GPIO_WritePin(WARNING_GPIO_PORT, WARNING_GPIO_PIN, GPIO_PIN_RESET);
+					break;
+				case SIGNAL::WARNING:
+					HAL_GPIO_WritePin(  ERROR_GPIO_PORT,   ERROR_GPIO_PIN, GPIO_PIN_SET);
+					HAL_GPIO_WritePin(WARNING_GPIO_PORT, WARNING_GPIO_PIN, GPIO_PIN_RESET);
+					break;
+				case SIGNAL::ERROR:
+					HAL_GPIO_WritePin(  ERROR_GPIO_PORT,   ERROR_GPIO_PIN, GPIO_PIN_RESET);
+					HAL_GPIO_WritePin(WARNING_GPIO_PORT, WARNING_GPIO_PIN, GPIO_PIN_SET);
+					break;
+			}
+
+			return *this;
 		}
 	}
 }

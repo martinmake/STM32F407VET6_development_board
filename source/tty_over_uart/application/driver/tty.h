@@ -7,18 +7,21 @@
 
 namespace Driver
 {
-	class Tty : public Base, public Fosl::Tty::Base
+	namespace Tty
 	{
-		public:
-			Tty(void);
-		public:
-			~Tty(void) = default;
+		class Handle : public Base, public Fosl::Tty::Base
+		{
+			public:
+				Handle(void);
+			public:
+				~Handle(void) = default;
 
-		public:
-			bool initialize(void) override;
-	};
+			public:
+				bool initialize(void) override;
+		};
+	}
 
-	extern Tty tty;
+	extern Tty::Handle tty;
 }
 
 #endif

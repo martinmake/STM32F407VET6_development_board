@@ -1,12 +1,12 @@
-[submodule "libraries/fosl-etl"]
-	path = libraries/fosl-etl
+[submodule "libraries/etl"]
+	path = libraries/etl
 	url = git://github.com/martinmake/fosl-etl.git
-[submodule "libraries/fosl-arm-util"]
-	path = libraries/fosl-arm-util
+[submodule "libraries/util"]
+	path = libraries/util
 	url = git://github.com/martinmake/fosl-arm-util.git
-[submodule "libraries/fosl-math"]
-	path = libraries/fosl-math
+[submodule "libraries/math"]
+	path = libraries/math
 	url = git://github.com/martinmake/fosl-math.git
-[submodule "libraries/fosl-tty"]
-	path = libraries/fosl-tty
+[submodule "libraries/tty"]
+	path = libraries/tty
 	url = git://github.com/martinmake/fosl-tty.git

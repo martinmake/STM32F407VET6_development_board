@@ -15,24 +15,24 @@ extern "C" int _write(int file, char *data, int len)
 
 namespace Driver
 {
-	using namespace Fosl;
-	using namespace Tty;
+	Tty::Handle tty;
 
-	Tty tty;
-
-	Tty::Tty(void)
-		: Fosl::Tty::Base(stdout)
+	namespace Tty
 	{
-	}
+		Handle::Handle(void)
+			: Fosl::Tty::Base(stdout)
+		{
+		}
 
-	bool Tty::initialize(void)
-	{
-		setvbuf(stdin,  NULL, _IONBF, 0);
-		setvbuf(stdout, NULL, _IONBF, 0);
-		setvbuf(stderr, NULL, _IONBF, 0);
+		bool Handle::initialize(void)
+		{
+			setvbuf(stdin,  NULL, _IONBF, 0);
+			setvbuf(stdout, NULL, _IONBF, 0);
+			setvbuf(stderr, NULL, _IONBF, 0);
 
-		reset_device();
+			reset_device();
 
-		INITIALIZATION_OK("TTY");
+			INITIALIZATION_OK("TTY");
+		}
 	}
 }
