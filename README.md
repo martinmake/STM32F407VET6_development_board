@@ -16,5 +16,37 @@
 
 ## How to compile
 
-1. make
-2. enjoy
+### The easy way
+
+``` console
+$ make
+```
+
+### The advanced way
+
+``` console
+$ mkdir build
+$ cd build
+$ cmake .. <CMAKE_OPTIONS>
+$ make
+```
+
+## Useful make targets
+
+### Upload `.bin.` file
+
+``` console
+$ make upload_<project_name>
+```
+
+### Connect over serial
+
+``` console
+$ make connection_over_serial
+```
+
+### Connect over virtual COM port
+
+``` console
+$ make connection_over_virtual_com_port
+```
