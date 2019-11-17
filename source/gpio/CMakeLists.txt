@@ -10,9 +10,9 @@ add_stm_executable(
 	./application/driver/base.h
 	./application/drivers.cpp
 	./application/drivers.h
+	./application/driver/status_leds/singleton.cpp
+	./application/driver/status_leds/singleton.h
 	./application/driver/status_leds/defs.h
-	./application/driver/status_leds/handle.cpp
-	./application/driver/status_leds/handle.h
 	./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 	./Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 	./Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h

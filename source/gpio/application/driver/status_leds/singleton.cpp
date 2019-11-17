@@ -1,18 +1,27 @@
-#include "driver/status_leds/handle.h"
+#include "driver/status_leds/singleton.h"
 
 namespace Driver
 {
-	StatusLeds::Handle status_leds;
+	StatusLeds::Singleton status_leds;
 
 	namespace StatusLeds
 	{
-		bool Handle::initialize(void)
+		Singleton::Singleton(void)
+		{
+			static bool is_constructed = false;
+
+			assert(!is_constructed)
+
+			is_constructed = true;
+		}
+
+		bool Singleton::initialize(void)
 		{
 			status_leds(SIGNAL::OK);
 			INITIALIZATION_OK("STATUS LEDS");
 		}
 
-		Handle& Handle::operator()(SIGNAL signal)
+		Singleton& Singleton::operator()(SIGNAL signal)
 		{
 			switch (signal)
 			{
