@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 include(${CMAKE_SOURCE_DIR}/cmake/toolchains/stm.cmake)
 
-project(STM32F407VET6_black_pill)
+project(STM32F407VET6_development_board)
 
 set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}/build)
 

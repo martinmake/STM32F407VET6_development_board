@@ -1,8 +1,8 @@
-# STM32F407VET6_black_pill
+# STM32F407VET6_development_board
 
 ## Board
 
-![IMAGE OF THE BOARD](https://raw.githubusercontent.com/martinmake/STM32F407VET6_black_pill/master/resources/STM32F407VET6_DEV_BOARD.jpg)
+![IMAGE OF THE BOARD](https://raw.githubusercontent.com/martinmake/STM32F407VET6_development_board/master/resources/STM32F407VET6_development_board.jpg)
 
 * TFT 320RGBx240 display (16bit ILI9341)
 * NRF24L01
@@ -50,4 +50,10 @@ $ make connection_over_serial
 
 ``` console
 $ make connection_over_virtual_com_port
+```
+
+### List all targets
+
+``` console
+$ make help
 ```
