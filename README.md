@@ -28,7 +28,7 @@ $ make
 ``` console
 $ mkdir build
 $ cd build
-$ cmake .. <CMAKE_OPTIONS>
+$ cmake .. [OPTIONS]
 $ make
 ```
 
