@@ -13,6 +13,7 @@
 * SWD
 * USB
 * GPIO
+* other
 
 ## How to compile
 
@@ -33,7 +34,7 @@ $ make
 
 ## Useful make targets
 
-### Upload `.bin.` file
+### Upload `.bin` file
 
 ``` console
 $ make upload_<project_name>
