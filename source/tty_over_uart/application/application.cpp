@@ -2,7 +2,8 @@
 
 #define TTY_RGB_COLOR(r, g, b) \
 	tty(DISPLAY_ATTRIBUTE::FG_SET_COLOR, DISPLAY_ATTRIBUTE::RGB, r, g, b);
-#define DELAY() HAL_Delay(500)
+
+#define DELAY_TIME 500
 
 using namespace fosl;
 using namespace Driver;
@@ -33,7 +34,7 @@ extern "C" void application(void)
  \ \___\/ / / /_______\/ / /     /_/ /     / / /_______\/ / /_________\/ / /   / / /
   \/_____/\/__________/\/_/      \_\/      \/__________/\/____________/\/_/    \/_/
 		)");
-		DELAY();
+		HAL_Delay(DELAY_TIME);
 
 		tty(
 			DISPLAY_ATTRIBUTE::RESET,
@@ -48,7 +49,7 @@ extern "C" void application(void)
  / /_//  __/  _|/ / |  __/ (__| | | |
 /___,' \___|_|  \/   \___|\___|_| |_|
 		)");
-		DELAY();
+		HAL_Delay(DELAY_TIME);
 
 		tty(
 			DISPLAY_ATTRIBUTE::RESET,
@@ -66,7 +67,7 @@ extern "C" void application(void)
    ░       ░  ░                    ░  ░ ░       ░  ░  ░
  ░                                    ░
 		)");
-		DELAY();
+		HAL_Delay(DELAY_TIME);
 
 		tty(
 			DISPLAY_ATTRIBUTE::RESET,
@@ -81,7 +82,7 @@ extern "C" void application(void)
 ██████╔╝███████╗██║        ██║   ███████╗╚██████╗██║  ██║
 ╚═════╝ ╚══════╝╚═╝        ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝
 		)");
-		DELAY();
+		HAL_Delay(DELAY_TIME);
 
 		tty(DISPLAY_ATTRIBUTE::RESET);
 		TTY_RGB_COLOR(255,   0,   0); tty.puts(R"(████████▄     ▄████████    ▄████████     ███        ▄████████  ▄████████    ▄█    █▄    )");
@@ -92,7 +93,7 @@ extern "C" void application(void)
 		TTY_RGB_COLOR(  0,   0, 255); tty.puts(R"(███    ███   ███    █▄    ███            ███       ███    █▄  ███    █▄    ███    ███   )");
 		TTY_RGB_COLOR( 75,   0, 130); tty.puts(R"(███   ▄███   ███    ███   ███            ███       ███    ███ ███    ███   ███    ███   )");
 		TTY_RGB_COLOR(148,   0, 211); tty.puts(R"(████████▀    ██████████   ███           ▄████▀     ██████████ ████████▀    ███    █▀    )");
-		DELAY();
+		HAL_Delay(DELAY_TIME);
 
 		tty(DISPLAY_ATTRIBUTE::RESET);
 		tty.putchar('\n');
@@ -103,7 +104,7 @@ extern "C" void application(void)
 		TTY_RGB_COLOR(0, 230,   0); tty.puts(R"( ▄▀▄▄▄▄▀  ▄▀▄▄▄▄    █         ▄▀        ▄▀▄▄▄▄    ▄▀▄▄▄▄▀   ▄▀  ▄▀  )");
 		TTY_RGB_COLOR(0, 150,  45); tty.puts(R"(█     ▐   █    ▐   █         █          █    ▐   █     ▐   █   █    )");
 		TTY_RGB_COLOR(0, 120,  20); tty.puts(R"(▐         ▐        ▐         ▐          ▐        ▐         ▐   ▐    )");
-		DELAY();
+		HAL_Delay(DELAY_TIME);
 
 		tty.putchar('\n');
 		assert(false && "LOOP ENDED");

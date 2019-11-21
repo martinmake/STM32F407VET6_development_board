@@ -1,8 +1,11 @@
-#ifndef _APPLICATION_DRIVER_STATUS_LEDS_SINGLETON_H_
-#define _APPLICATION_DRIVER_STATUS_LEDS_SINGLETON_H_
+#ifndef _DRIVER_STATUS_LEDS_SINGLETON_H_
+#define _DRIVER_STATUS_LEDS_SINGLETON_H_
 
 #include "driver/base.h"
-#include "driver/status_leds/defs.h"
+#include "driver/tty.h"
+
+#include "driver/status_leds/gpio.h"
+#include "driver/status_leds/signal.h"
 
 namespace Driver
 {
@@ -10,15 +13,15 @@ namespace Driver
 	{
 		class Singleton : public Driver::Base
 		{
-			public: // CONSTRUCTORS
-				Singleton(void);
-			public: // DESTRUCTOR
+			public:
+				Singleton(void) = default;
+			public:
 				~Singleton(void) = default;
 
-			public: // METHODS
+			public:
 				bool initialize(void) override;
 
-			public: // OPERATORS
+			public:
 				Singleton& operator()(SIGNAL signal);
 		};
 	}

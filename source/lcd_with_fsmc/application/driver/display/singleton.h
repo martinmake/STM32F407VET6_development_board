@@ -1,22 +1,22 @@
-#ifndef _APPLICATION_DRIVER_DISPLAY_HANDLE_H_
-#define _APPLICATION_DRIVER_DISPLAY_HANDLE_H_
+#ifndef _DRIVER_DISPLAY_SINGLETON_H_
+#define _DRIVER_DISPLAY_SINGLETON_H_
 
 #include <fosl/ili9341/base.h>
 
 #include "driver/base.h"
 
-#include "driver/display/defs.h"
+#include "driver/display/dimensions.h"
 
 namespace Driver
 {
 	namespace Display
 	{
-		class Handle : public Driver::Base, public fosl::Ili9341::Base
+		class Singleton : public Driver::Base, public fosl::Ili9341::Base
 		{
 			public: // CONSTRUCTORS
-				Handle(void);
+				Singleton(void);
 			public: // DESTRUCTOR
-				~Handle(void) = default;
+				~Singleton(void) = default;
 
 			public: // METHODS
 				bool initialize(void);
@@ -28,7 +28,7 @@ namespace Driver
 		};
 	}
 
-	extern Display::Handle display;
+	extern Display::Singleton display;
 }
 
 #endif

@@ -2,7 +2,7 @@
 #include "usb_device.h"
 #include "usbd_cdc_if.h"
 
-#include "driver/tty/handle.h"
+#include "driver/tty/singleton.h"
 
 extern USBD_HandleTypeDef hUsbDeviceFS;
 
@@ -19,16 +19,16 @@ extern "C" int _write(int file, char *data, int len)
 
 namespace Driver
 {
-	Tty::Handle tty;
+	Tty::Singleton tty;
 
 	namespace Tty
 	{
-		Handle::Handle(void)
+		Singleton::Singleton(void)
 			: fosl::Tty::Base(stdout)
 		{
 		}
 
-		bool Handle::initialize(void)
+		bool Singleton::initialize(void)
 		{
 			setvbuf(stdin,  NULL, _IONBF, 0);
 			setvbuf(stdout, NULL, _IONBF, 0);

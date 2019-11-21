@@ -1,5 +1,5 @@
-#ifndef _EVALUATION_DRIVER_BASE_H_
-#define _EVALUATION_DRIVER_BASE_H_
+#ifndef _DRIVER_BASE_H_
+#define _DRIVER_BASE_H_
 
 #include "config.h"
 

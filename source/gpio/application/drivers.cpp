@@ -4,6 +4,15 @@ using namespace Driver;
 
 Drivers drivers;
 
+Drivers::Drivers(void)
+{
+	static bool are_constructed = false;
+
+	assert(!are_constructed)
+
+	are_constructed = true;
+}
+
 bool Drivers::initialize(void)
 {
 	bool has_failed = false;

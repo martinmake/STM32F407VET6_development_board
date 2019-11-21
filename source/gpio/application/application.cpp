@@ -7,11 +7,11 @@ extern "C" int application(void)
 	while (true)
 	{
 		using namespace Driver;
-		using namespace Driver::StatusLeds;
+		using namespace Driver::STATUS_LEDS;
 
-		status_leds(StatusLeds::SIGNAL::WARNING);
+		status_leds(SIGNAL::WARNING);
 		HAL_Delay(500);
-		status_leds(StatusLeds::SIGNAL::ERROR);
+		status_leds(SIGNAL::ERROR);
 		HAL_Delay(500);
 	}
 }

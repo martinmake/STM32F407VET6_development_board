@@ -1,34 +1,30 @@
-#include "main.h"
-#include "usb_device.h"
-#include "usbd_cdc_if.h"
+#include "usart.h"
 
-#include "driver/tty/handle.h"
-
-extern USBD_HandleTypeDef hUsbDeviceFS;
+#include "driver/tty/singleton.h"
 
 extern "C" int _write(int file, char *data, int len)
 {
 	(void) file;
 
-	uint8_t status;
-	do status = CDC_Transmit_FS((uint8_t*) data, len);
-	while (status == USBD_BUSY);
+	HAL_StatusTypeDef status =
+		HAL_UART_Transmit(&huart1, (uint8_t*) data, len, HAL_MAX_DELAY);
 
-	return len;
+	int bytes_sent = status == HAL_OK ? len : 0;
+	return bytes_sent;
 }
 
 namespace Driver
 {
-	Tty::Handle tty;
+	Tty::Singleton tty;
 
 	namespace Tty
 	{
-		Handle::Handle(void)
+		Singleton::Singleton(void)
 			: fosl::Tty::Base(stdout)
 		{
 		}
 
-		bool Handle::initialize(void)
+		bool Singleton::initialize(void)
 		{
 			setvbuf(stdin,  NULL, _IONBF, 0);
 			setvbuf(stdout, NULL, _IONBF, 0);

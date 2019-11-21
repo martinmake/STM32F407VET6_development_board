@@ -6,7 +6,7 @@
 class Drivers
 {
 	public: // CONSTRUCTORS
-		Drivers(void) = default;
+		Drivers(void);
 	public: // DESTRUCTOR
 		~Drivers(void) = default;
 

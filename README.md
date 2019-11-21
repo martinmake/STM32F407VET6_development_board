@@ -40,10 +40,10 @@ $ make
 $ make upload_<project_name>
 ```
 
-### Connect over serial
+### Connect over serial port
 
 ``` console
-$ make connection_over_serial
+$ make connection_over_serial_port
 ```
 
 ### Connect over virtual COM port

@@ -1,5 +1,5 @@
-#ifndef _EVALUATION_CONFIG_H_
-#define _EVALUATION_CONFIG_H_
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
 
 #include "stm32f4xx_hal.h"
 
