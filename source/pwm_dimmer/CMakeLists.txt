@@ -1,4 +1,4 @@
-project(pwm CXX C ASM)
+project(pwm_dimmer CXX C ASM)
 
 add_stm_executable(
 	NAME ${PROJECT_NAME}

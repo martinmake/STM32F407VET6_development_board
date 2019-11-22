@@ -11,6 +11,8 @@ extern "C" void application(void)
 	{
 		using namespace fosl::Tty;
 
+		tty(DISPLAY_ATTRIBUTE::BOLD);
+
 		dimmer.update_brightness();
 		HAL_Delay(20);
 	}
