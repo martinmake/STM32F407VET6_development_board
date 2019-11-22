@@ -29,13 +29,13 @@ set(CMAKE_ASM_FLAGS_RELEASE        "-O3 -Os -s")
 set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -Og -fno-rtti -save-temps -g -gdwarf-3 -gstrict-dwarf")
 set(CMAKE_C_FLAGS_RELWITHDEBINFO   "-O3 -Og           -save-temps -g -gdwarf-3 -gstrict-dwarf")
 set(CMAKE_ASM_FLAGS_RELWITHDEBINFO "-O3 -Og           -save-temps -g -gdwarf-3 -gstrict-dwarf")
-set(CMAKE_CXX_FLAGS_DEBUG          "-O0     -fno-rtti -save-temps -g -gdwarf-3 -gstrict-dwarf")
-set(CMAKE_C_FLAGS_DEBUG            "-O0               -save-temps -g -gdwarf-3 -gstrict-dwarf")
-set(CMAKE_ASM_FLAGS_DEBUG          "-O0               -save-temps -g -gdwarf-3 -gstrict-dwarf")
+set(CMAKE_CXX_FLAGS_DEBUG          "-O0     -fno-rtti -save-temps -g -gdwarf-3 -gstrict-dwarf -DDEBUG")
+set(CMAKE_C_FLAGS_DEBUG            "-O0               -save-temps -g -gdwarf-3 -gstrict-dwarf -DDEBUG")
+set(CMAKE_ASM_FLAGS_DEBUG          "-O0               -save-temps -g -gdwarf-3 -gstrict-dwarf -DDEBUG")
 
 add_definitions("-Wall")
-add_definitions("-Werror")
-# add_definitions("-Wpedantic")
+# add_definitions("-Werror")
+add_definitions("-Wpedantic")
 # add_definitions("-pedantic-errors")
 add_definitions("-fshort-enums")
 add_definitions("-funsigned-char")
@@ -46,13 +46,6 @@ add_definitions("-fsingle-precision-constant")
 add_definitions("-fno-exceptions")
 
 include(${CMAKE_SOURCE_DIR}/cmake/utils/stm.cmake)
-
-add_custom_target(
-	tags ALL
-
-    COMMAND ctags -R --c++-kinds=+p --fields=+iaS --extras=+q .
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-)
 
 add_subdirectory(libraries)
 add_subdirectory(source)
