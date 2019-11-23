@@ -1,4 +1,4 @@
-project(tty_over_uart CXX C ASM)
+project(uart_tty CXX C ASM)
 
 add_stm_executable(
 	NAME ${PROJECT_NAME}
