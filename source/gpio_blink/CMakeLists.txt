@@ -1,4 +1,4 @@
-project(gpio CXX C ASM)
+project(gpio_blink CXX C ASM)
 
 add_stm_executable(
 	NAME ${PROJECT_NAME}

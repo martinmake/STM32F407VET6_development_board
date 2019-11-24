@@ -1,4 +1,4 @@
-project(tty_over_vcp CXX C ASM)
+project(vcp_tty CXX C ASM)
 
 add_stm_executable(
 	NAME ${PROJECT_NAME}
@@ -158,8 +158,6 @@ target_include_directories(
 target_link_libraries(
 	${PROJECT_NAME}.elf
 
-	fosl-math
-	fosl-util
 	fosl-arm-util
 	fosl-tty
 )

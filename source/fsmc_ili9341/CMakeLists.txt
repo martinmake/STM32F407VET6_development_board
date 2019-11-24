@@ -1,4 +1,4 @@
-project(lcd_with_fsmc CXX C ASM)
+project(fsmc_ili9341 CXX C ASM)
 
 add_stm_executable(
 	NAME ${PROJECT_NAME}

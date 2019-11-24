@@ -16,3 +16,6 @@
 [submodule "libraries/fosl-ili9341"]
 	path = libraries/fosl-ili9341
 	url = https://github.com/martinmake/fosl-ili9341.git
+[submodule "libraries/fosl-l3gd20"]
+	path = libraries/fosl-l3gd20
+	url = https://github.com/martinmake/fosl-l3gd20.git

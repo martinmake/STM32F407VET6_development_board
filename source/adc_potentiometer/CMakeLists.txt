@@ -1,4 +1,4 @@
-project(adc CXX C ASM)
+project(adc_potentiometer CXX C ASM)
 
 add_stm_executable(
 	NAME ${PROJECT_NAME}
