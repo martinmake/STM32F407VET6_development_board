@@ -1,21 +1,18 @@
-[submodule "libraries/fosl-arm-util"]
-	path = libraries/fosl-arm-util
-	url = https://github.com/martinmake/fosl-arm-util.git
-[submodule "libraries/fosl-math"]
-	path = libraries/fosl-math
-	url = https://github.com/martinmake/fosl-math.git
-[submodule "libraries/fosl-tty"]
-	path = libraries/fosl-tty
-	url = https://github.com/martinmake/fosl-tty.git
-[submodule "libraries/fosl-etl"]
-	path = libraries/fosl-etl
-	url = https://github.com/martinmake/fosl-etl.git
-[submodule "libraries/fosl-util"]
-	path = libraries/fosl-util
-	url = https://github.com/martinmake/fosl-util.git
-[submodule "libraries/fosl-ili9341"]
-	path = libraries/fosl-ili9341
-	url = https://github.com/martinmake/fosl-ili9341.git
-[submodule "libraries/fosl-l3gd20"]
-	path = libraries/fosl-l3gd20
-	url = https://github.com/martinmake/fosl-l3gd20.git
+[submodule "libraries/FOSL-ARM-Utilities"]
+	path = libraries/FOSL-ARM-Utilities
+	url = https://github.com/martinmake/FOSL-ARM-Utilities.git
+[submodule "libraries/FOSL-TTY"]
+	path = libraries/FOSL-TTY
+	url = https://github.com/martinmake/FOSL-TTY.git
+[submodule "libraries/FOSL-Utilities"]
+	path = libraries/FOSL-Utilities
+	url = https://github.com/martinmake/FOSL-Utilities.git
+[submodule "libraries/FOSL-ILI9341"]
+	path = libraries/FOSL-ILI9341
+	url = https://github.com/martinmake/FOSL-ILI9341.git
+[submodule "libraries/FOSL-L3G4200D"]
+	path = libraries/FOSL-L3G4200D
+	url = https://github.com/martinmake/FOSL-L3G4200D.git
+[submodule "libraries/FOSL-Math"]
+	path = libraries/FOSL-Math
+	url = https://github.com/martinmake/FOSL-Math.git
