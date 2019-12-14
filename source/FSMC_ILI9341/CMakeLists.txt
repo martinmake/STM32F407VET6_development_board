@@ -9,7 +9,6 @@ add_stm_executable(
 	./application/Driver/all.hpp
 	./application/Driver/Base.cpp
 	./application/Driver/Base.hpp
-	./application/Driver/Display/DIMENSIONS.hpp
 	./application/Driver/Display.hpp
 	./application/Driver/Display/Singleton.cpp
 	./application/Driver/Display/Singleton.hpp
